@@ -4,11 +4,6 @@ import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
 
-
-
-
-
-
   const [enteredTitle,setEnteredTitle] = useState('');
 
   const titleChangeHandler = ( event ) =>{
@@ -37,7 +32,7 @@ const ExpenseForm = (props) => {
       ammount: enteredAmmount
     };
       
-      props.onSaveExpenseData(expenseData);
+    props.onSaveExpenseData(expenseData);
 
       setEnteredTitle('');
       setEnteredDate('');
@@ -59,11 +54,11 @@ const ExpenseForm = (props) => {
 				</div>
 				<div className='new-expense__control'>
 					<label>Date</label>
-					<input type='date' value={enteredDate} min='2020-01-01' max='2023-12-31' onChange={dateChangeHandler}/>
+					<input type='date' value={enteredDate} min='2019-01-01' max='2023-12-31' onChange={dateChangeHandler}/>
 				</div>
 			</div>
 			<div className='new-expense__actions'>
-				<button type='submit'>New Expense</button>
+				<button type='submit'>Add Expense</button>
 			</div>
 		</form>
 	
